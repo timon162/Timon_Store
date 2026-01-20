@@ -1,0 +1,39 @@
+.wrap-title-fashion-album-header-admin-view {
+    height: 400px;
+}
+
+.left-model-detail-fashion-album-header-admin-view {
+    width: 300px;
+}
+
+.right-model-detail-fashion-album-header-admin-view {
+    width: 300px;
+}
+
+.img-model {
+    height: 100%;
+}
+
+.detail-title-fashion-album-header-admin-view {
+    width: 500px;
+    max-height: 400px;
+    overflow-y: auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.detail-title-fashion-album-header-admin-view ul {
+    height: fit-content;
+}
+
+.title-item-detail-fashion-album-header-admin-view {
+    border-bottom: solid 0.5px black;
+}
+
+.item-detail-fashion-album-header-admin-view a {
+    color: gray;
+    cursor: pointer;
+}
+
+.item-detail-fashion-album-header-admin-view a:hover {
+    color: black;
+}

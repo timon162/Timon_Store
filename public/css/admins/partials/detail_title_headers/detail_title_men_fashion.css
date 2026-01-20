@@ -1,0 +1,39 @@
+.wrap-title-fashion-men-header-admin-view {
+    height: 400px;
+}
+
+.left-model-detail-fashion-men-header-admin-view {
+    width: 300px;
+}
+
+.right-model-detail-fashion-men-header-admin-view {
+    width: 300px;
+}
+
+.img-model {
+    height: 100%;
+}
+
+.detail-title-fashion-men-header-admin-view {
+    width: 500px;
+    max-height: 400px;
+    overflow-y: auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.detail-title-fashion-men-header-admin-view ul {
+    height: fit-content;
+}
+
+.title-item-detail-fashion-men-header-admin-view {
+    border-bottom: solid 0.5px black;
+}
+
+.item-detail-fashion-men-header-admin-view a {
+    color: gray;
+    cursor: pointer;
+}
+
+.item-detail-fashion-men-header-admin-view a:hover {
+    color: black;
+}

@@ -1,0 +1,58 @@
+.banner-home-admin-view {
+    min-height: 460px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.list-banner-admin-home {
+    width: fit-content;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.item-banner-admin-home {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.item-banner-admin-home a {
+    width: 100%;
+    display: block;
+    user-select: none;
+    cursor: pointer;
+}
+
+.active-item-banner-admin-home {
+    scroll-snap-align: start;
+}
+
+.list-banner-admin-home::-webkit-scrollbar {
+    display: none;
+}
+
+.wrap-list-point-select-item-banner-admin-home {
+    height: 25px;
+}
+
+.list-point-select-item-banner-admin-home {
+    width: fit-content;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 1rem 0 1rem !important;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.point-select-item-banner-admin-home {
+    height: 8px;
+    width: 8px;
+    background-color: gray;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.point-select-item-banner-admin-home.active-item-banner-admin-home {
+    background: red;
+}

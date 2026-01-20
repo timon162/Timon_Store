@@ -1,0 +1,46 @@
+.line-gap {
+    width: 100px;
+    height: 5px;
+    background-color: gray;
+    border-radius: 15px;
+}
+
+.wrap-list-hot-product-admin-home {
+    max-width: 1225px;
+    overflow: hidden;
+}
+
+.list-hot-product-admin-home {
+    width: fit-content;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.item-hot-product-admin-home {
+    width: 310px;
+    height: 500px;
+    padding: 0 1.5rem 0 1.5rem;
+    justify-content: space-between;
+}
+
+.img-hot-product-admin-home {
+    width: 100%;
+    height: 380px;
+}
+
+.name-hot-product-admin-home h3 {
+    font-size: 20px;
+    margin: 0 !important;
+}
+
+.price-and-quantity-hot-product-admin-home h3 {
+    font-size: 20px;
+    margin: 0 !important;
+}
+
+.price-and-quantity-hot-product-admin-home span {
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: #f5e8d9;
+}

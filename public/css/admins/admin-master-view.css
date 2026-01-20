@@ -1,0 +1,13 @@
+body {
+    font-family: "Varela Round", sans-serif;
+    margin: 0;
+}
+
+body a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-admin-view {
+    background-color: #fff6ec;
+}

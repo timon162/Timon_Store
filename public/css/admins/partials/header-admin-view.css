@@ -1,0 +1,124 @@
+.container-header-admin-view {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-web-header-admin-view {
+    color: black;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.search-zone-header-admin-view {
+    position: relative;
+}
+
+.input-search-header-admin-view {
+    width: 360px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e0e0e0;
+    padding-left: 3%;
+}
+
+.icon-search-header-admin-view {
+    position: absolute;
+    right: 3%;
+    cursor: pointer;
+}
+
+.item-icon-service-user-header-admin-view {
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+.wrap-icon-service-user-header-admin-view {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.munber-check-icon-service-user-header-admin-view {
+    width: 20px;
+    height: 20px;
+    border: solid 1px gray;
+    border-radius: 50%;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+.icon-service-user-header-admin-view {
+    width: 40px;
+    height: 40px;
+    border: solid 1px gray;
+    border-radius: 50%;
+}
+
+.name-icon-service-user-header-admin-view {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.down-center-header-admin-view {
+    border-top: solid 0.5px gray;
+}
+
+.list-title-header-admin-view li {
+    font-size: 14px;
+}
+
+.item-list-title-header-admin-view {
+    height: 30px;
+    position: relative;
+}
+
+.item-list-title-header-admin-view span {
+    align-self: flex-start;
+    transform: rotate(90deg);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.item-list-title-header-admin-view:hover span {
+    width: fit-content;
+    transform: rotate(-90deg);
+}
+
+.detail-title-header-admin-view {
+    width: fit-content;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    transform: translateX(-43%);
+    display: none;
+    background-color: #fff6ec;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.item-list-title-header-admin-view:hover .detail-title-header-admin-view {
+    display: flex;
+}
+
+.detail-title-fashion-news-header-admin-view {
+    width: 250px;
+    max-height: 400px;
+}
+
+.title-item-detail-fashion-news-header-admin-view a {
+    height: 30px;
+    width: 100%;
+}
+
+.title-item-detail-fashion-news-header-admin-view:hover {
+    border-left: solid 2px black;
+    background-color: #e7e2dd;
+}

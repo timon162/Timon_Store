@@ -3,7 +3,7 @@
          @foreach ($imgBannerAdminHome as $key => $item)
              <div class="item-banner-admin-home d-flex" data-id-item-banner-admin-home="{{ $key }}">
                  <a href="" class="link-banner-admin-home w-100">
-                     <img src="{{ $item }}" alt="" class="w-100">
+                     <img src="{{ $item }}" alt="" class="w-100 h-100">
                  </a>
              </div>
          @endforeach

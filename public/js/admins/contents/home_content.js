@@ -33,3 +33,44 @@ $(".list-point-select-item-banner-admin-home").on(
         });
     }
 );
+
+let indexMove = 0;
+let sizeHotImg = 310;
+
+$("#id-btn-move-right-hot-product-admin-home").on("click", function (e) {
+    e.preventDefault();
+    const silder = $(".list-hot-product-admin-home");
+    const maxIndex = silder.find("li").length - 4;
+
+    if (indexMove < maxIndex) {
+        indexMove++;
+        $(".list-hot-product-admin-home").css(
+            "transform",
+            `translateX(-${indexMove * sizeHotImg}px)`
+        );
+    } else {
+        $(".list-hot-product-admin-home").css("transform", `translateX(0px)`);
+        indexMove = 0;
+    }
+    console.log(indexMove, indexMove * sizeHotImg);
+});
+
+$("#id-btn-move-left-hot-product-admin-home").on("click", function (e) {
+    e.preventDefault();
+    const silder = $(".list-hot-product-admin-home");
+    const maxIndex = silder.find("li").length - 4;
+
+    if (indexMove > 0) {
+        indexMove--;
+        $(".list-hot-product-admin-home").css(
+            "transform",
+            `translateX(-${indexMove * sizeHotImg}px)`
+        );
+    } else {
+        $(".list-hot-product-admin-home").css(
+            "transform",
+            `translateX(-${maxIndex * sizeHotImg}px)`
+        );
+        indexMove = maxIndex;
+    }
+});

@@ -11,3 +11,9 @@ body a {
 .header-admin-view {
     background-color: #fff6ec;
 }
+
+.line-center-content-footer span {
+    height: 5px;
+    width: 400px;
+    background-color: black;
+}

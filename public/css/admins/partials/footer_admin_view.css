@@ -1,0 +1,10 @@
+.container-footer-admin-view {
+    background-color: #cabaa0;
+}
+
+.war-footer-admin-view {
+    padding: 1rem 0 1rem 0;
+    border-bottom: solid 2px white;
+    border-top: solid 2px white;
+    justify-content: space-around;
+}

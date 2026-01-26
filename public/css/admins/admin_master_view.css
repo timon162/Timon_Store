@@ -17,3 +17,7 @@ body a {
     width: 400px;
     background-color: black;
 }
+
+.github-link:hover {
+    color: blue;
+}

@@ -18,4 +18,19 @@ class MapperProductUtil
 
         return $result;
     }
+
+    public static function mapperCategoryStyleProduct(Collection $product)
+    {
+        $resultcategoryStyle = $product->groupBy(fn($value) => $value->categoryStyle->category_style_name);
+
+        $result = $resultcategoryStyle->map(fn($value) => $value->map(fn($item) => [
+            'product_name' => $item->product_name,
+            'product_status' => $item->product_status,
+            'product_price' => format_price($item->product_price),
+            'product_quantity' => $item->product_quantity,
+            'product_image' => $item->product_image,
+        ]))->toArray();
+
+        return $result;
+    }
 }

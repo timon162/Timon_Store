@@ -6,6 +6,7 @@ use App\Repositories\Interfaces\ProductInterfaceRepository;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use App\Models\TimonStoreDetailAlbumProducts;
+use App\Models\TimonStoreProducts;
 
 class ProductRepository implements ProductInterfaceRepository
 {
@@ -26,5 +27,13 @@ class ProductRepository implements ProductInterfaceRepository
     public function getHotProduct(): Collection
     {
         return DB::table('timon_store_products')->where('is_hot', 1)->get();
+    }
+
+    //////////
+
+    public function getLimitProductByCategoryStyleId(int $id): Collection
+    {
+        $product = TimonStoreProducts::with('categoryStyle')->where('category_style_id', $id)->take(6)->get();
+        return $product;
     }
 }

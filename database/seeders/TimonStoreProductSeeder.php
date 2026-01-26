@@ -92,7 +92,7 @@ class TimonStoreProductSeeder extends Seeder
         $row5 = [
             'product_name' => '3D Striped Long Sleeves',
             'product_code' => 'product_code',
-            'category_style_id' => 7,
+            'category_style_id' => 19,
             'supplier_id' => 3,
             'product_status' => 'còn hàng',
             'product_price' => 2450000,
@@ -109,7 +109,7 @@ class TimonStoreProductSeeder extends Seeder
         $row6 = [
             'product_name' => 'Monster Pants',
             'product_code' => 'product_code',
-            'category_style_id' => 9,
+            'category_style_id' => 23,
             'supplier_id' => 3,
             'product_status' => 'còn hàng',
             'product_price' => 1150000,
@@ -126,7 +126,7 @@ class TimonStoreProductSeeder extends Seeder
         $row7 = [
             'product_name' => 'Áo blazer túi cơi ngực FWTV002',
             'product_code' => 'FWTV00271PE00RB_BL',
-            'category_style_id' => 8,
+            'category_style_id' => 22,
             'supplier_id' => 4,
             'product_status' => 'còn hàng',
             'product_price' => 1049300,
@@ -143,7 +143,7 @@ class TimonStoreProductSeeder extends Seeder
         $row8 = [
             'product_name' => 'Áo polo trơn bo tay kẻ thêu logo ngực GSTP602',
             'product_code' => 'GSTP60272CA13SB_BL',
-            'category_style_id' => 7,
+            'category_style_id' => 20,
             'supplier_id' => 4,
             'product_status' => 'còn hàng',
             'product_price' => 439200,

@@ -5,12 +5,13 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Controller;
 
 Route::get('/home', [AdminController::class, 'viewAdminHome']);
+Route::get('/category-style/{id}', [AdminController::class, 'viewCategoryStyle'])->name('category-style');
 
 Route::get('/test', function () {
-    $repo = app(\App\Repositories\ProductRepository::class);
-    $sevice = app(\App\Services\ProductService::class);
+    $repo = app(\App\Repositories\SupplierRepository::class);
+    $sevice = app(\App\Services\CategoryService::class);
 
-    $dataRepo = $sevice->getHotProduct();
+    $dataRepo = $sevice->groupCategoryName();
 
     return response()->json($dataRepo);
 });

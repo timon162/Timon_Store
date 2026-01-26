@@ -19,7 +19,7 @@
                     </div>
 
                     <div
-                        class="price-and-quantity-hot-product-admin-home w-100 d-flex justify-content-around align-items-center">
+                        class="price-and-quantity-hot-product-admin-home w-100 d-flex justify-content-between align-items-center">
                         <h3>{{ $item['product_price'] }}</h3>
                         <span>Số lượng: {{ $item['product_quantity'] }}</span>
                     </div>

@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-use function Psy\bin;
 use Illuminate\Support\Facades\View;
 use App\Services\Interfaces\CategoryInterfaceService;
 use App\Services\Interfaces\ProductInterfaceService;
@@ -38,6 +37,16 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             \App\Services\Interfaces\PartialInterfaceService::class,
             \App\Services\PartialService::class
+        );
+
+        $this->app->bind(
+            \App\Repositories\Interfaces\SupplierInterfaceRepository::class,
+            \App\Repositories\SupplierRepository::class
+        );
+
+        $this->app->bind(
+            \App\Services\Interfaces\SupplierInterfaceService::class,
+            \App\Services\SupplierService::class
         );
     }
 

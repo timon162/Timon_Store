@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('css/admins/partials/footer_admin_view.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admins/contents/home_content.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admins/contents/hot_product.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admins/contents/category_style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admins/admin_master_view.css') }}">
 </head>
 
@@ -27,7 +28,7 @@
     <header class="header-admin-view d-flex align-items-center justify-content-center px-3">
         @include('admins.partials.header')
     </header>
-    <div class="content-admin-view pb-3">
+    <div class="content-admin-view">
         @yield('main-content-admin-view')
     </div>
     <div class="line-center-content-footer d-flex w-100 justify-content-center align-items-center p-4 gap-3">

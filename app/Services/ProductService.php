@@ -45,4 +45,13 @@ class ProductService implements ProductInterfaceService
 
         return $resultHotProduct;
     }
+
+    public function getLimitProductByCategoryStyleId(int $id): array
+    {
+        $product = $this->productRepo->getLimitProductByCategoryStyleId($id);
+
+        $result = MapperProductUtil::mapperCategoryStyleProduct($product);
+
+        return $result;
+    }
 }

@@ -7,13 +7,15 @@ use Illuminate\Http\Request;
 use App\Services\Interfaces\CategoryInterfaceService;
 use App\Services\Interfaces\ProductInterfaceService;
 use App\Services\Interfaces\PartialInterfaceService;
+use App\Services\Interfaces\SupplierInterfaceService;
 
 class AdminController extends Controller
 {
     public function __construct(
         protected CategoryInterfaceService $categoryService,
         protected ProductInterfaceService $productService,
-        protected PartialInterfaceService $partialService
+        protected PartialInterfaceService $partialService,
+        protected SupplierInterfaceService $supplierService
     ) {}
 
     public function viewAdminHome()
@@ -22,5 +24,13 @@ class AdminController extends Controller
         $hotProduct = $this->productService->getHotProduct();
 
         return view('admins.contents.homes.content_home', compact('imgBannerAdminHome', 'hotProduct'));
+    }
+
+    public function viewCategoryStyle(int $id)
+    {
+        $supplier = $this->supplierService->getAllSupplierByCategoryStyleId($id);
+        $product = $this->productService->getLimitProductByCategoryStyleId($id);
+
+        return view('admins.contents.category_styles.categoty_style_page', compact('supplier', 'product'));
     }
 }

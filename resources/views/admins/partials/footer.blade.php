@@ -6,6 +6,12 @@
                 <span>Địa chỉ: Thành phố Hồ Chí Minh</span>
                 <span>Số điện thoại: 0948887959</span>
                 <span>Email: duyle8889@gmail.com</span>
+                <div class="link-infor d-flex gap-2">
+                    <span>Github: </span>
+                    <a class="github-link"
+                        href="https://github.com/timon162/Timon_Store">https://github.com/timon162/Timon_Store</a>
+                </div>
+
             </div>
         </div>
         <div class="skill-footer-view">

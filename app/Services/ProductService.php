@@ -8,6 +8,7 @@ use App\Utils\MapperSetProductUtil;
 use App\Utils\MapperAlbumUtil;
 use App\Constants\GenderConstant;
 use App\Utils\MapperProductUtil;
+use Illuminate\Support\Collection;
 
 class ProductService implements ProductInterfaceService
 {
@@ -30,7 +31,7 @@ class ProductService implements ProductInterfaceService
 
     public function getNameDetailAlbumProduct(): array
     {
-        $albumProduct = $this->productRepo->getNameDetailAlbumProduct();
+        $albumProduct = $this->productRepo->getAlbum();
 
         $groupAlbumByNameSetProduct = MapperAlbumUtil::mapperDetailAlbum($albumProduct);
 
@@ -51,6 +52,15 @@ class ProductService implements ProductInterfaceService
         $product = $this->productRepo->getLimitProductByCategoryStyleId($id);
 
         $result = MapperProductUtil::mapperCategoryStyleProduct($product);
+
+        return $result;
+    }
+
+    public function getLimitSetProductByAlbumId(int $id): array
+    {
+        $setProduct = $this->productRepo->getLimitSetProductByAlbumId($id);
+
+        $result = MapperProductUtil::mapperSetProduct($setProduct);
 
         return $result;
     }

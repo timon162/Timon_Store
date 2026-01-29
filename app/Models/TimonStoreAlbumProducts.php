@@ -15,4 +15,9 @@ class TimonStoreAlbumProducts extends Model
     {
         return $this->hasMany(TimonStoreDetailAlbumProducts::class, 'album_product_id');
     }
+
+    public function detailTotalAlbumProduct()
+    {
+        return $this->hasMany(TimonStoreDetailTotalAlbums::class, 'total_album_id');
+    }
 }

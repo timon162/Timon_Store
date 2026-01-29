@@ -33,4 +33,12 @@ class AdminController extends Controller
 
         return view('admins.contents.category_styles.categoty_style_page', compact('supplier', 'product'));
     }
+
+    public function viewSetProduct(int $id)
+    {
+        $supplier = $this->supplierService->getDefaultSupplier();
+        $product = $this->productService->getLimitSetProductByAlbumId($id);
+
+        return view('admins.contents.category_styles.categoty_style_page', compact('supplier', 'product'));
+    }
 }

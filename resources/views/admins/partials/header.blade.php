@@ -1,7 +1,7 @@
 <div class="container-header-admin-view pt-2">
     <div class="left-header-admin-view">
         <div class="logo-zone-header-admin-view">
-            <a href="#" class="logo-web-header-admin-view">
+            <a href="{{ route('admin.home') }}" class="logo-web-header-admin-view">
                 TIMON STORE
             </a>
         </div>
@@ -28,7 +28,7 @@
             <ul
                 class="list-title-header-admin-view d-flex justify-content-center align-items-center gap-5 pt-2 m-0 list-unstyled ">
                 <li class="item-list-title-header-admin-view d-flex gap-2 mt-1">
-                    <a href="">TRANG CHỦ</a>
+                    <a href="{{ route('admin.home') }}">TRANG CHỦ</a>
                 </li>
                 <li class="item-list-title-header-admin-view">
                     <div class="title-header-admin-view d-flex gap-2">

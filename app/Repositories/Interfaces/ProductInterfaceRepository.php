@@ -7,6 +7,12 @@ use Illuminate\Support\Collection;
 interface ProductInterfaceRepository
 {
     public function getSetProductBuyGender(int $gender): Collection;
+
     public function getNameDetailAlbumProduct(): Collection;
+
     public function getHotProduct(): Collection;
+
+    public function getLimitSetProductByAlbumId(int $id): Collection;
+
+    public function getAlbum(): Collection;
 }

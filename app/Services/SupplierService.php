@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Repositories\Interfaces\SupplierInterfaceRepository;
 use App\Services\Interfaces\SupplierInterfaceService;
 use App\Utils\MapperSupplierUtil;
+use Illuminate\Support\Collection;
 
 class SupplierService implements SupplierInterfaceService
 {
@@ -15,6 +16,14 @@ class SupplierService implements SupplierInterfaceService
         $result = $this->supplierRepo->getAllSupplierByCategoryStyleId($id);
 
         $supplierResult = MapperSupplierUtil::getSupplier($result);
+
+        return $supplierResult;
+    }
+
+    public function getDefaultSupplier(): array
+    {
+
+        $supplierResult = MapperSupplierUtil::defaultSupplier();
 
         return $supplierResult;
     }

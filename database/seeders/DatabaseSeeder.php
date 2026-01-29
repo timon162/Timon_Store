@@ -13,6 +13,8 @@ use Database\Seeders\TimonStoreSetProductSeeder;
 use Database\Seeders\TimonStoreDetailSetProductSeeder;
 use Database\Seeders\TimonStoreAlbumProductSeeder;
 use Database\Seeders\TimonStoreDetailAlbumProductSeeder;
+use Database\Seeders\TimonStoreTotalAlbumSeeder;
+use Database\Seeders\TimonStoreDetailTotalAlbumSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -31,5 +33,7 @@ class DatabaseSeeder extends Seeder
         $this->call([TimonStoreDetailSetProductSeeder::class]);
         $this->call([TimonStoreAlbumProductSeeder::class]);
         $this->call([TimonStoreDetailAlbumProductSeeder::class]);
+        $this->call([TimonStoreTotalAlbumSeeder::class]);
+        $this->call([TimonStoreDetailTotalAlbumSeeder::class]);
     }
 }

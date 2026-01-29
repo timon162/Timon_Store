@@ -5,6 +5,7 @@
     </div>
 
     <div class="detail-title-fashion-album-header-admin-view d-grid gap-4 p-3">
+
         @foreach ($dataAlbumProduct as $key => $item)
             <ul class="d-flex flex-column list-unstyled">
                 <li class="title-item-detail-fashion-album-header-admin-view mb-2 pb-1">
@@ -12,8 +13,8 @@
                 </li>
                 @foreach ($item as $setProduct)
                     <li class="item-detail-fashion-album-header-admin-view pt-1">
-                        <a href=""
-                            data-id-set-Product=`{{ $setProduct['id_set_product'] }}`>{{ $setProduct['name_set_product'] }}</a>
+                        <a href="{{ route('set-product', ['id' => $setProduct['album_id']]) }}"
+                            data-id-set-Product=`{{ $setProduct['album_id'] }}`>{{ $setProduct['album_name'] }}</a>
                     </li>
                 @endforeach
             </ul>

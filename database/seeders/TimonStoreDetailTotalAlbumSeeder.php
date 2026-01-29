@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class TimonStoreAlbumProductSeeder extends Seeder
+class TimonStoreDetailTotalAlbumSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,7 +16,8 @@ class TimonStoreAlbumProductSeeder extends Seeder
         $list = [];
 
         $row1 = [
-            'album_product_name' => 'Album Xuân',
+            'album_product_id' => 1,
+            'total_album_id' => 1,
             'created_at' => now(),
             'updated_at' => now(),
         ];
@@ -24,7 +25,8 @@ class TimonStoreAlbumProductSeeder extends Seeder
         array_push($list, $row1);
 
         $row2 = [
-            'album_product_name' => 'Album Hạ',
+            'album_product_id' => 2,
+            'total_album_id' => 1,
             'created_at' => now(),
             'updated_at' => now(),
         ];
@@ -32,7 +34,8 @@ class TimonStoreAlbumProductSeeder extends Seeder
         array_push($list, $row2);
 
         $row3 = [
-            'album_product_name' => 'Album Thu',
+            'album_product_id' => 3,
+            'total_album_id' => 2,
             'created_at' => now(),
             'updated_at' => now(),
         ];
@@ -40,13 +43,14 @@ class TimonStoreAlbumProductSeeder extends Seeder
         array_push($list, $row3);
 
         $row4 = [
-            'album_product_name' => 'Album Đông',
+            'album_product_id' => 4,
+            'total_album_id' => 2,
             'created_at' => now(),
             'updated_at' => now(),
         ];
 
         array_push($list, $row4);
 
-        DB::table('timon_store_album_products')->insert($list);
+        DB::table('timon_store_detail_total_albums')->insert($list);
     }
 }

@@ -18,6 +18,10 @@
     border-bottom: solid 1px black;
 }
 
+.wrap-item-menu-category-style-admin-view:last-child {
+    border-bottom: none;
+}
+
 .title-menu-category-style-admin-view {
     font-size: 20px;
     font-weight: 600;
@@ -47,4 +51,22 @@
     padding: 5px;
     border-radius: 15px;
     background-color: #f5e8d9;
+}
+
+.list-item-menu-category-style-admin-view {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.list-item-menu-category-style-admin-view::-webkit-scrollbar {
+    width: 5px;
+}
+
+.list-item-menu-category-style-admin-view::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 999px;
+}
+
+.list-item-menu-category-style-admin-view::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
 }

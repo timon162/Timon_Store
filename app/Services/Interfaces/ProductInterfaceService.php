@@ -11,4 +11,6 @@ interface ProductInterfaceService
     public function getHotProduct(): array;
 
     public function getLimitProductByCategoryStyleId(int $id): array;
+
+    public function getLimitSetProductByAlbumId(int $id): array;
 }

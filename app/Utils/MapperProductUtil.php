@@ -33,4 +33,18 @@ class MapperProductUtil
 
         return $result;
     }
+
+    public static function mapperSetProduct(Collection $setProduct)
+    {
+        $groupSetProductByAlbumName = $setProduct->groupBy(fn($value) => $value->albumProduct->album_product_name);
+
+        $result = $groupSetProductByAlbumName->map(fn($value) => $value->map(fn($item) => [
+            'product_name' => $item->setProduct->set_product_name,
+            'product_status' => $item->setProduct->set_product_status,
+            'product_price' => format_price($item->setProduct->set_product_price),
+            'product_quantity' => $item->setProduct->set_product_quantity,
+            'product_image' => $item->setProduct->set_product_image,
+        ]))->toArray();
+        return $result;
+    }
 }

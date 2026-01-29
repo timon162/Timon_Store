@@ -17,4 +17,11 @@ class MapperSupplierUtil
 
         return $result;
     }
+
+    public static function defaultSupplier(): array
+    {
+        return $supplier = [
+            'Timon Store' => '',
+        ];
+    }
 }

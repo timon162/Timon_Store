@@ -8,6 +8,7 @@ use App\Utils\MapperSetProductUtil;
 use App\Utils\MapperAlbumUtil;
 use App\Constants\GenderConstant;
 use App\Utils\MapperProductUtil;
+use App\Models\TimonStoreProducts;
 use Illuminate\Support\Collection;
 
 class ProductService implements ProductInterfaceService
@@ -63,5 +64,19 @@ class ProductService implements ProductInterfaceService
         $result = MapperProductUtil::mapperSetProduct($setProduct);
 
         return $result;
+    }
+
+    public function findProductById(int $id): array
+    {
+        $detailProduct = $this->productRepo->findProductById($id);
+        return MapperProductUtil::mapperDetailProduct($detailProduct);
+    }
+
+    public function getRelatedProducts(int $id): array
+    {
+        $detailProduct = $this->productRepo->findProductById($id);
+        $relatesProduct = $this->productRepo->getRelatedProducts($detailProduct->category_style_id, $detailProduct->id);
+
+        return MapperProductUtil::mapperRelatesProduct($relatesProduct);
     }
 }

@@ -9,7 +9,7 @@
             @foreach ($hotProduct as $item)
                 <li class="item-hot-product-admin-home d-flex flex-column gap-3">
                     <div class="img-hot-product-admin-home d-flex">
-                        <a href="">
+                        <a href="{{ route('detail-product', ['id' => $item['id']]) }}">
                             <img src="{{ $item['product_image'] }}" alt="" class="w-100 h-100">
                         </a>
                     </div>

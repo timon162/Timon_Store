@@ -3,6 +3,7 @@
 namespace App\Repositories\Interfaces;
 
 use Illuminate\Support\Collection;
+use App\Models\TimonStoreProducts;
 
 interface ProductInterfaceRepository
 {
@@ -15,4 +16,8 @@ interface ProductInterfaceRepository
     public function getLimitSetProductByAlbumId(int $id): Collection;
 
     public function getAlbum(): Collection;
+
+    public function findProductById(int $id): TimonStoreProducts;
+
+    public function getRelatedProducts(int $categoryStyleId, int $excludeId): Collection;
 }

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('css/admins/contents/home_content.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admins/contents/hot_product.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admins/contents/category_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admins/contents/detail_product.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admins/admin_master_view.css') }}">
 </head>
 

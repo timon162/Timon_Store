@@ -53,4 +53,20 @@ class ProductRepository implements ProductInterfaceRepository
         )->get();
         return $album;
     }
+
+    public function findProductById(int $id): TimonStoreProducts
+    {
+        return TimonStoreProducts::with('supplier')->findOrFail($id);
+    }
+
+    public function getRelatedProducts(int $categoryStyleId, int $excludeId): Collection
+    {
+        return TimonStoreProducts::select([
+            'id',
+            'product_name',
+            'product_status',
+            'product_price',
+            'product_image'
+        ])->where('category_style_id', $categoryStyleId)->where('id', '!=', $excludeId)->get();
+    }
 }

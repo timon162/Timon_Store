@@ -41,4 +41,13 @@ class AdminController extends Controller
 
         return view('admins.contents.category_styles.categoty_style_page', compact('supplier', 'product'));
     }
+
+    public function viewDetailProduct(int $id)
+    {
+        $detailProduct  = $this->productService->findProductById($id);
+
+        $relatedProduct = $this->productService->getRelatedProducts($id);
+
+        return view('admins.contents.detail_products.detail_product_page', compact('detailProduct', 'relatedProduct'));
+    }
 }

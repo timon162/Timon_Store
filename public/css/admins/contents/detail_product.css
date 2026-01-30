@@ -1,0 +1,52 @@
+.wrap-information-detail-product-admin-view {
+    width: 950px;
+}
+
+.wrap-related-detail-product-admin-view {
+    width: 300px;
+    border: solid gray 1px;
+    border-radius: 15px;
+}
+
+.image-detail-product-admin-view {
+    width: 37%;
+    height: 450px;
+}
+
+.infor-detail-product-admin-view {
+    width: 50%;
+}
+
+.infor-supplier-detail-product .line-center {
+    height: 80%;
+    border: solid 1px black;
+}
+
+.detail-product-price-admin-view {
+    border-bottom: solid 1px black;
+}
+
+.title-related-product-admin-view p {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: center;
+    border-bottom: solid 1px black;
+}
+
+.list-related-product-admin-view {
+    max-height: 385px;
+    overflow-y: auto;
+}
+
+.item-related-product-admin-view {
+    cursor: pointer;
+}
+
+.image-item-related-product-admin-view {
+    width: 30%;
+    height: 100px;
+}
+.infor-item-related-product-admin-view {
+    width: 60%;
+}

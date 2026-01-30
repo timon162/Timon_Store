@@ -9,7 +9,7 @@
                     <li
                         class="item-content-product-category-style-admin-view w-100 d-flex flex-column justify-content-between gap-3 align-items-center">
                         <div class="img-content-product-category-style-admin-view w-100 d-flex">
-                            <a href="">
+                            <a href="{{ route('detail-product', ['id' => $item['id']]) }}">
                                 <img src="{{ $item['product_image'] }}" alt="" class="w-100 h-100">
                             </a>
                         </div>

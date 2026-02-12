@@ -47,5 +47,6 @@
 </script>
 
 <script src="{{ asset('js/admins/contents/home_content.js') }}"></script>
+<script src="{{ asset('js/admins/contents/detail_prroduct.js') }}"></script>
 
 </html>

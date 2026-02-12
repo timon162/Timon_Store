@@ -5,7 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\TimonStoreDetailSetProducts;
 use App\Models\TimonStoreSuppliers;
-use App\Models\TimonStoreCategories;
+use App\Models\TimonStoreCategoryStyles;
+use App\Models\TimonStoreImageDescriptionOptions;
+use App\Models\TimonStoreOptionProducts;
+
 
 
 class TimonStoreProducts extends Model
@@ -35,5 +38,15 @@ class TimonStoreProducts extends Model
     public function detailSetProduct()
     {
         return $this->hasMany(TimonStoreDetailSetProducts::class, 'product_id');
+    }
+
+    public function imageDecriptionOption()
+    {
+        return $this->hasMany(TimonStoreImageDescriptionOptions::class, 'product_id');
+    }
+
+    public function optionProduct()
+    {
+        return $this->hasMany(TimonStoreOptionProducts::class, 'product_id');
     }
 }

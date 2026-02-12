@@ -48,6 +48,8 @@ class AdminController extends Controller
 
         $relatedProduct = $this->productService->getRelatedProducts($id);
 
-        return view('admins.contents.detail_products.detail_product_page', compact('detailProduct', 'relatedProduct'));
+        $optionProduct = $this->productService->getOptionProductById($id);
+
+        return view('admins.contents.detail_products.detail_product_page', compact('detailProduct', 'relatedProduct', 'optionProduct'));
     }
 }

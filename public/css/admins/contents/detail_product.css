@@ -8,9 +8,14 @@
     border-radius: 15px;
 }
 
-.image-detail-product-admin-view {
+.image-zone-detail-product-admin-view {
     width: 37%;
-    height: 450px;
+    align-items: center;
+}
+
+.image-detail-product-admin-view {
+    width: 90%;
+    height: 400px;
 }
 
 .infor-detail-product-admin-view {
@@ -47,6 +52,92 @@
     width: 30%;
     height: 100px;
 }
+
 .infor-item-related-product-admin-view {
     width: 60%;
+}
+
+.detail-product-name-option-admin-view span {
+    width: 60px;
+    height: fit-content;
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 15px;
+}
+
+.detail-product-name-option-admin-view span:hover {
+    background-color: gray;
+    cursor: pointer;
+    border: white;
+}
+
+.quantity-zone-detail-product-admin-view button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+
+.input-quantity-detail-product-admin-view {
+    width: 100px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.add-product-detail-product-admin-view {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.image-description-detail-product-admin-view {
+    width: 80px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.list-image-description-detail-product-admin-view {
+    overflow-x: hidden;
+}
+
+.wrap-image-description-product {
+    position: relative;
+}
+
+.btn-move-detail-product-admin-view {
+    height: 30px;
+    width: 30px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid 0.5px black;
+    position: absolute;
+    background-color: #ced3d7;
+    z-index: 100;
+    top: 30px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.btn-move-detail-product-admin-view.left {
+    left: 0;
+}
+
+.btn-move-detail-product-admin-view.right {
+    right: 0;
+}
+
+.wrap-image-description-product:hover .btn-move-detail-product-admin-view.left {
+    opacity: 1;
+    transform: translateX(-15px);
+    z-index: 100;
+}
+
+.wrap-image-description-product:hover
+    .btn-move-detail-product-admin-view.right {
+    opacity: 1;
+    transform: translateX(15px);
+    z-index: 100;
 }

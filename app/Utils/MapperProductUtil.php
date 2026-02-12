@@ -2,6 +2,7 @@
 
 namespace App\Utils;
 
+use App\Models\TimonStoreOptionProducts;
 use Illuminate\Support\Collection;
 use App\Models\TimonStoreProducts;
 
@@ -76,6 +77,20 @@ class MapperProductUtil
             'product_quantity' => $detailProduct->product_quantity,
             'supplier_name' => $detailProduct->supplier->supplier_name,
         ];
+        return $result;
+    }
+
+    public static function mapperTypeOptionProduct(Collection $optionProduct)
+    {
+        $result = $optionProduct->groupBy('option_type')->map(
+            fn($value) => $value->map(fn($item) => [
+                'option_id' => $item->id,
+                'option_name' => $item->option_name,
+                'option_price' => $item->option_price,
+                'image_decription_option' => $item->ImageDecriptionOption->pluck('description_option_image')
+            ])->toArray()
+        )->toArray();
+
         return $result;
     }
 }

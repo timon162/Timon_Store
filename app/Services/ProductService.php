@@ -79,4 +79,10 @@ class ProductService implements ProductInterfaceService
 
         return MapperProductUtil::mapperRelatesProduct($relatesProduct);
     }
+
+    public function getOptionProductById(int $id): array
+    {
+        $optionProduct = $this->productRepo->getOptionProductById($id);
+        return MapperProductUtil::mapperTypeOptionProduct($optionProduct);
+    }
 }

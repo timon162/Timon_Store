@@ -14,7 +14,7 @@ Route::get('/test', function () {
     $repo = app(\App\Repositories\ProductRepository::class);
     $sevice = app(\App\Services\ProductService::class);
 
-    $dataRepo = $sevice->findProductById(3);
+    $dataRepo = $sevice->getOptionProductById(1);
 
     return response()->json($dataRepo);
 });

@@ -7,6 +7,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use App\Models\TimonStoreDetailAlbumProducts;
 use App\Models\TimonStoreDetailTotalAlbums;
+use App\Models\TimonStoreOptionProducts;
 use App\Models\TimonStoreProducts;
 
 class ProductRepository implements ProductInterfaceRepository
@@ -68,5 +69,10 @@ class ProductRepository implements ProductInterfaceRepository
             'product_price',
             'product_image'
         ])->where('category_style_id', $categoryStyleId)->where('id', '!=', $excludeId)->get();
+    }
+
+    public function getOptionProductById(int $id): Collection
+    {
+        return TimonStoreOptionProducts::with('ImageDecriptionOption')->where('product_id', $id)->get();
     }
 }

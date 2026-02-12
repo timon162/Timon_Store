@@ -20,4 +20,6 @@ interface ProductInterfaceRepository
     public function findProductById(int $id): TimonStoreProducts;
 
     public function getRelatedProducts(int $categoryStyleId, int $excludeId): Collection;
+
+    public function getOptionProductById(int $id): Collection;
 }

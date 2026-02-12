@@ -19,4 +19,6 @@ interface ProductInterfaceService
     public function findProductById(int $id): array;
 
     public function getRelatedProducts(int $id): array;
+
+    public function getOptionProductById(int $id): array;
 }
